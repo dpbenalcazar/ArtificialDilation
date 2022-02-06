@@ -1,4 +1,4 @@
-function im2 = change_dilation(im1, dil, pupil_xyr, iria_xyr)
+function im2 = change_dilation(im1, dil, pupil_xyr, iris_xyr)
 % Changes the dilation level in the input image im1 to the one specified by
 % the variable dil [0, 1].
 % Inputs pupil_xyr and iris_xyr are the circular segmentation of the iris
@@ -16,7 +16,7 @@ function im2 = change_dilation(im1, dil, pupil_xyr, iria_xyr)
     
     % Original pupuil and iris radii:
     rp1 = pupil_xyr(3);
-    ri = iria_xyr(3);
+    ri = iris_xyr(3);
     
     % Output pupil radius:
     rp2 = dil*ri;
