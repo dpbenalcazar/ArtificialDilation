@@ -58,5 +58,8 @@ def change_dilation(im1, dil, pupil_xyr, iris_xyr):
             else:
                 im2[v,u,:] = col
 
+    # Squeeze extra dimension if grayscale
+    if chanels == 1:
+        im2 = np.squeeze(im2, axis=2)
+
     return Image.fromarray(im2)
-    
