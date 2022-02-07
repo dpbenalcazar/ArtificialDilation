@@ -1,3 +1,5 @@
+./assets/tmp.png
+
 *.ipynb_checkpoints
 *.asv
 *.pyc
