@@ -36,7 +36,7 @@ end
 for f = 1:Nf % alternatively place list of files to modify, i.e.: [1:2,4]
     % Read input image:
     name = [folder, Files(f).name];    
-    img1 = iread(name);
+    img1 = imread(name);
     
     % Show image
     img_title = forTitle([Files(f).name]);
