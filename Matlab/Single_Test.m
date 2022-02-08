@@ -11,8 +11,10 @@ dil2 = 0.15;
 dil3 = 0.5;
 
 % Change Dilation
+tic
 im2 = change_dilation_old(im1, dil2, pupil_xyr, iris_xyr);
 im3 = change_dilation_old(im1, dil3, pupil_xyr, iris_xyr);
+toc
 
 figure(1)
 subplot 131

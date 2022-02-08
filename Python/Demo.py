@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import PySimpleGUI as sg
 from PIL import ImageTk, Image
-from change_dilation import change_dilation
+from change_dilation_v2 import change_dilation
 
 class gui_demo(object):
     def __init__(self, folder, files, data):
