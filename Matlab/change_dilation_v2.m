@@ -1,4 +1,4 @@
-function im2 = change_dilation(im1, dil, pupil_xyr, iris_xyr)
+function im2 = change_dilation_v2(im1, dil, pupil_xyr, iris_xyr)
 % Changes the dilation level in the input image im1 to the one specified by
 % the variable dil [0, 1].
 % Inputs pupil_xyr and iris_xyr are the circular segmentation of the iris
@@ -36,28 +36,24 @@ function im2 = change_dilation(im1, dil, pupil_xyr, iris_xyr)
     
     % Sample new iris
     [v, u] = find(iris_mask);
-    for i = 1:length(u)
-        xp = u(i) - pupil_xyr(1);
-        yp = v(i) - pupil_xyr(2);
-        rp = sqrt(xp^2+yp^2);
-        th = atan2(yp,xp);
-        r = m*(rp-rp2)+rp1;
-        x = round(r*cos(th) + pupil_xyr(1));
-        y = round(r*sin(th) + pupil_xyr(2));
-        im2(v(i),u(i),:) = im1(y,x,:);
-    end
+    xp = u - pupil_xyr(1);
+    yp = v - pupil_xyr(2);
+    rp = sqrt(xp.^2 + yp.^2);
+    th = atan2(yp, xp);
+    r = m*(rp-rp2)+rp1;
+    x = round(r.*cos(th) + pupil_xyr(1));
+    y = round(r.*sin(th) + pupil_xyr(2));
+    im2(v,u,:) = im1(y,x,:);
     
     % Sample new pupil
     [v, u] = find(pupil_mask);
-    for i = 1:length(u)
-        xp = u(i) - pupil_xyr(1);
-        yp = v(i) - pupil_xyr(2);
-        rp = sqrt(xp^2+yp^2);
-        r = rp1*rp/rp2;
-        th = atan2(yp,xp);
-        x = round(r*cos(th) + pupil_xyr(1));
-        y = round(r*sin(th) + pupil_xyr(2));
-        im2(v(i),u(i),:) = im1(y,x,:);
-    end
-
+    xp = u - pupil_xyr(1);
+    yp = v - pupil_xyr(2);
+    rp = sqrt(xp.^2+yp.^2);
+    r = rp1*rp/rp2;
+    th = atan2(yp,xp);
+    x = round(r.*cos(th) + pupil_xyr(1));
+    y = round(r.*sin(th) + pupil_xyr(2));
+    im2(v,u,:) = im1(y,x,:);
+    
 end

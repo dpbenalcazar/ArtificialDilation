@@ -1,4 +1,5 @@
 im1 = im2double(imread('../samples/LVL.png'));
+% im1= imresize(im1, 0.2);
 
 pupil_xyr = [200, 200, 51];
 iris_xyr = [196, 210, 181];
