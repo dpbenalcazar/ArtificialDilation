@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import PySimpleGUI as sg
 from PIL import ImageTk, Image
-from change_dilation_v1 import change_dilation
+from change_dilation_v2 import change_dilation
 
 class gui_demo(object):
     def __init__(self, folder, files, data):
@@ -20,8 +20,8 @@ class gui_demo(object):
             [sg.Image(filename=self.folder+self.files[self.ind], key="-img-")],
             [sg.Text(" ")],
             [sg.Text("Dilation Ratio Rp/Ri:")],
-            [sg.Slider(range=(0.1, 0.9), resolution=0.01, tick_interval = 0.1,
-             size=(60, 15), orientation='h',
+            [sg.Slider(range=(0.1, 0.75), resolution=0.01, tick_interval = 0.1,
+             size=(50, 15), orientation='h',
              key="-bar-", enable_events=True)]
         ]
         # Create the window
