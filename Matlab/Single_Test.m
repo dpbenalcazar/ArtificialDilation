@@ -1,5 +1,4 @@
 im1 = im2double(imread('../samples/LVL.png'));
-% im1= imresize(im1, 0.2);
 
 pupil_xyr = [200, 200, 51];
 iris_xyr = [196, 210, 181];
@@ -13,8 +12,8 @@ dil3 = 0.5;
 
 % Change Dilation
 tic
-im2 = change_dilation_old(im1, dil2, pupil_xyr, iris_xyr);
-im3 = change_dilation_old(im1, dil3, pupil_xyr, iris_xyr);
+im2 = change_dilation(im1, dil2, pupil_xyr, iris_xyr);
+im3 = change_dilation(im1, dil3, pupil_xyr, iris_xyr);
 toc
 
 figure(1)
