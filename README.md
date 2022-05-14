@@ -27,10 +27,12 @@ The arguments pupil_xyr is the circular segmentation of the pupil in im1, with t
 The script speed_test.py evaluates the processing time of the function when synthesizing 100 images:
 
 ```bash
+cd Python/
 python speed_test.py
 ```
 
 ## Marlab Implementation
+### Usage
 The Matlab implementation requires Matlab's Image Processing Toolbox to work.
 
 The command is identical to the python implementation with the same arguments.
@@ -39,4 +41,24 @@ The command is identical to the python implementation with the same arguments.
 im2 = change_dilation(im1, dil2, pupil_xyr, iris_xyr);
 ```
 
+### Manual Segmentation
+You can segment your own images manually using the script: Matlab/Manual_Segmentation.m
+
+Change the input and output paths to your own iris dataset, and run the program to start segmenting the pupil and iris of each image. Fist click with the mouse four points on the pupil/iris boundary and then click 4 other points in the iris/sclera boundary. Therefore, you must perform 8 consecutive clicks per image. Te program will compute the best fitting circles for the pupil and the iris, and display the results in a new figure. After that, the next image to be segmented will be automatically presented for you to click 8 more times. After the final image has been segmented, the program will save all segmentation data in a single CSV file.
+
 ## Demos
+Interactive demos are offered with this repository, in which the user can change the dilation level of provided images using a slide bar.
+
+![alt text](./assets/Figure1.png?raw=true)
+
+The following command runs the python´s demo. Moving the slide bar will automatically generate a new iris image with the selected dilation level and display it. To switch images, first select the desired image with the scroll element on top and then press the Apply button.
+
+```bash
+cd Python/
+python Demo.py
+```
+
+The Matlab demo was programmed as a Matlab App. First change directories to the folder named Matlab/ and then execute the following command. The slide bar will change the dilation level in real time, and the scrol element will switch automatically to the desired image.
+
+## Cite
+Publication pending ...
