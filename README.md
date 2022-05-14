@@ -22,7 +22,7 @@ The following python command synthesizes im2 with dilation level dil2 (between 0
 im2 = change_dilation(im1, dil2, pupil_xyr, iris_xyr)
 ```
 
-The arguments pupil_xyr is the circular segmentation of the pupil in im1, with the format: (xp, yp, rp). Where (xp, yp) is the center of the circle that best fits the pupil and rp is the pupil radius. Likewise, iris_xyr is the circular segmentation of the iris, with the format: (xi, yi, ri).
+The argument pupil_xyr is the circular segmentation of the pupil in im1, with the format: (xp, yp, rp). Where (xp, yp) is the center of the circle that best fits the pupil and rp is the pupil radius. Likewise, iris_xyr is the circular segmentation of the iris, with the format: (xi, yi, ri).
 
 The script speed_test.py evaluates the processing time of the function when synthesizing 100 images:
 
@@ -31,7 +31,7 @@ cd Python/
 python speed_test.py
 ```
 
-## Marlab Implementation
+## Matlab Implementation
 ### Usage
 The Matlab implementation requires Matlab's Image Processing Toolbox to work.
 
@@ -47,7 +47,7 @@ You can segment your own images manually using the script: Matlab/Manual_Segment
 Change the input and output paths to your own iris dataset, and run the program to start segmenting the pupil and iris of each image. Fist click with the mouse four points on the pupil/iris boundary and then click 4 other points in the iris/sclera boundary. Therefore, you must perform 8 consecutive clicks per image. Te program will compute the best fitting circles for the pupil and the iris, and display the results in a new figure. After that, the next image to be segmented will be automatically presented for you to click 8 more times. After the final image has been segmented, the program will save all segmentation data in a single CSV file.
 
 ## Demos
-Interactive demos are offered with this repository, in which the user can change the dilation level of provided images using a slide bar.
+Interactive demos are offered with this repository. The user can change in real time the dilation level of provided images using a slide bar.
 
 ![alt text](./assets/GUIs.png?raw=true)
 
