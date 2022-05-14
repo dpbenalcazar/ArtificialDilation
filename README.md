@@ -22,6 +22,21 @@ The following python command synthesizes im2 with dilation level dil2 (between 0
 im2 = change_dilation(im1, dil2, pupil_xyr, iris_xyr)
 ```
 
-The arguments pupil_xyr is the circular segmentation of the pupil in im1, with the format: (xp, yp, rp). Where (xp,yp) is the center of the circle that best fits the pupil and rp is the pupil radius. Likewise, iris_xyr is the circular segmentation of the iris, with the format: (xi, yi, ri).
+The arguments pupil_xyr is the circular segmentation of the pupil in im1, with the format: (xp, yp, rp). Where (xp, yp) is the center of the circle that best fits the pupil and rp is the pupil radius. Likewise, iris_xyr is the circular segmentation of the iris, with the format: (xi, yi, ri).
+
+The script speed_test.py evaluates the processing time of the function when synthesizing 100 images:
+
+```bash
+python speed_test.py
+```
 
 ## Marlab Implementation
+The Matlab implementation requires Matlab's Image Processing Toolbox to work.
+
+The command is identical to the python implementation with the same arguments.
+
+```matlab
+im2 = change_dilation(im1, dil2, pupil_xyr, iris_xyr);
+```
+
+## Demos
