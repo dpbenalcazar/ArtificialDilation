@@ -49,7 +49,7 @@ Change the input and output paths to your own iris dataset, and run the program 
 ## Demos
 Interactive demos are offered with this repository, in which the user can change the dilation level of provided images using a slide bar.
 
-![alt text](./assets/Figure1.png?raw=true)
+![alt text](./assets/GUIs.png?raw=true)
 
 The following command runs the python´s demo. Moving the slide bar will automatically generate a new iris image with the selected dilation level and display it. To switch images, first select the desired image with the scroll element on top and then press the Apply button.
 
@@ -59,6 +59,10 @@ python Demo.py
 ```
 
 The Matlab demo was programmed as a Matlab App. First change directories to the folder named Matlab/ and then execute the following command. The slide bar will change the dilation level in real time, and the scrol element will switch automatically to the desired image.
+
+```matlab
+Demo
+```
 
 ## Cite
 Publication pending ...
