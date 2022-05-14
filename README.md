@@ -1,7 +1,7 @@
 # Artificial Dilation
 This is the repository for the research work: Artificial Pupil Dilation for Data Augmentation in Iris Semantic Segmentation (pending publication)
 
-Our method artificially changes the dilation level of an iris image to any desired level. The dilation level is defined as the ratio between the pupil radius and the iris radius. This method is based on deterministic equations and sampling techniques so it does not requires any training.
+Our method artificially changes the dilation level of an iris image to any desired level. The dilation level is defined as the ratio between the pupil radius and the iris radius. This method is based on deterministic equations and sampling techniques so it doesn't require any training.
 
 The following image illustrates the effects of our data augmentation function. Given the image on the left and its circular segmentation data, the other two images were synthesized. One with a reduced dilation and the other with an increase in dilation.  
 
@@ -61,7 +61,7 @@ python Demo.py
 The Matlab demo was programmed as a Matlab App. First change directories to the folder named Matlab/ and then execute the following command. The slide bar will change the dilation level in real time, and the scrol element will switch automatically to the desired image.
 
 ```matlab
-Demo
+Demo.mlapp
 ```
 
 ## Cite
