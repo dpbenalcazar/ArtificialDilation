@@ -1,4 +1,6 @@
 assets/tmp.png
+results
+results/*
 
 *.ipynb_checkpoints
 *.asv
