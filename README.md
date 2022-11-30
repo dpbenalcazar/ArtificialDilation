@@ -64,5 +64,15 @@ The Matlab demo was programmed as a Matlab App. First change directories to the 
 Demo.mlapp
 ```
 
-## Cite
-Publication pending ...
+## Cite us
+```
+@INPROCEEDINGS{9935749,
+  author={Benalcazar, Daniel P. and Benalcazar, David A. and Valenzuela, Andres},
+  booktitle={2022 IEEE Sixth Ecuador Technical Chapters Meeting (ETCM)}, 
+  title={Artificial Pupil Dilation for Data Augmentation in Iris Semantic Segmentation}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-6},
+  doi={10.1109/ETCM56276.2022.9935749}}
+```
