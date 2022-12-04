@@ -7,7 +7,7 @@ from tqdm import tqdm
 from change_dilation_v2 import change_dilation
 
 # Open input image
-im1 = Image.open('../samples/S1008R02.png')
+im1 = Image.open('../samples/NIR_1.png')
 
 # Read segmentation data
 df = pd.read_csv('../samples/segm.csv')
