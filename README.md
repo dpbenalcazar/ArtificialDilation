@@ -75,7 +75,7 @@ cd Python/
 python Demo.py
 ```
 
-The Matlab demo was programmed as a Matlab App. First change directories to the folder named Matlab/ and then execute the following command. The slide bar will change the dilation level in real time, and the scrol element will switch automatically to the desired image.
+The Matlab demo was programmed as a Matlab App. First change directories to the folder named Matlab/ and then execute the following command. The slide bar will change the dilation level in real time, and the scroll element will switch automatically to the desired image.
 
 ```matlab
 Demo.mlapp
