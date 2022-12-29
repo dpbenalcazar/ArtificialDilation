@@ -1,5 +1,5 @@
 # Artificial Dilation
-This is the repository for the research work: [Artificial Pupil Dilation for Data Augmentation in Iris Semantic Segmentation](https://ieeexplore.ieee.org/document/9935749)
+This is the repository for the research work: [Artificial Pupil Dilation for Data Augmentation in Iris Semantic Segmentation](https://ieeexplore.ieee.org/document/9935749). You can also find the paper on [arXiv](https://arxiv.org/abs/2212.12733).
 
 Our method artificially changes the dilation level of an iris image to any desired level. The dilation level is defined as the ratio between the pupil radius and the iris radius. This method is based on deterministic equations and sampling techniques so it **doesn't require any training**.
 
