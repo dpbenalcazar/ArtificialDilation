@@ -1,6 +1,7 @@
 assets/tmp.png
 results
 results/*
+Python/Augment.ipynb
 
 *.ipynb_checkpoints
 *.asv
